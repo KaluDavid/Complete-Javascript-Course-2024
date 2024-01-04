@@ -19,12 +19,12 @@ m tall.
 // solution
 // 1. Store Mark's and John's mass and height in variables
 //Mark's mass and height
-let markMass = 78;
-let markHeight = 1.69;
+const markMass = 78;
+const markHeight = 1.69;
 
 // john's mass and height
-let johnMass = 92;
-let johnHeight = 1.92;
+const johnMass = 92;
+const johnHeight = 1.92;
 
 // 2. Calculate both their BMIs using the formula (you can even implement both versions)
 // formula:  BMI = mass / height ** 2 = mass / (height * height)
@@ -35,8 +35,9 @@ console.log(markBmi);
 const johnBmi = johnMass / johnHeight ** 2;
 console.log(johnBmi);
 
-console.log(markBmi > johnBmi)
 
 // 3. Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
 const markHigherBMI = markBmi > johnBmi;
 console.log(markHigherBMI);
+
+
