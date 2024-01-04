@@ -56,7 +56,6 @@ BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement �
 GOOD LUCK � 
 */
-
 // answer
 let highestBMI;
 if (markBMI >= johnBMI) {
