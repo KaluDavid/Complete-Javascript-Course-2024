@@ -57,3 +57,29 @@ arabic: '5th most spoken language'
 for all other simply log 'Great language too :D'
 */
 // answer
+
+const language = 'chinese';
+
+switch (language) {
+    case 'chinese':
+    case 'mandarin':
+        result = 'MOST number of native speakers!';
+        break;
+    case 'spanish':
+        result = '2nd place in number of native speakers';
+        break;
+    case 'english':
+        result = '3rd place';
+        break;
+    case 'hindi':
+        result = 'Number 4';
+        break;
+    case 'arabic':
+        result = '5th most spoken language';
+        break;
+
+    default:
+        result = 'Great language too :D';
+        break;
+}
+console.log(result);
