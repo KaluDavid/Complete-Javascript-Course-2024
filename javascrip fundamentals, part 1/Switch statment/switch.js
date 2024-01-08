@@ -1,3 +1,49 @@
+// Switch statement to fix lectures for every week
+const day = prompt('Input a day to see the course you have that day!');
+let result;
+switch (day) {
+    case 'monday':
+        result = 'French';
+        break;
+    case 'tuesday':
+        result = 'Writing and orthography';
+        break;
+    case 'wednesday':
+        result = 'computational Linguistics';
+        break;
+    case 'thursday':
+        result = 'Geography';
+        break;
+    case 'friday':
+        result = 'African Communication System';
+        break;
+    case 'saturday':
+    case 'sunday':
+        result = 'Rest, its weekend :)';
+        break;
+    default:
+        result = 'Not a valid day (:';
+}
+console.log(result);
+
+
+// You can else use the if else statement
+if (day === 'monday') {
+    result = 'French';
+} else if (day === 'tuesday') {
+    result = 'Writing and orthography';
+} else if (day === 'wednesday') {
+    result = 'computational Linguistics';
+} else if (day === 'thursday') {
+    result = 'Geography';
+} else if (day === 'friday') {
+    result = 'African Communication System';
+} else if (day === 'saturday' || 'sunday') {
+    result = 'Rest, its weekend :)';
+} else {
+    result = 'Not a valid day (:';
+}
+console.log(result);
 /*
 LECTURE: The switch Statement
 1. Use a switch statement to log the following string for the given 'language':
