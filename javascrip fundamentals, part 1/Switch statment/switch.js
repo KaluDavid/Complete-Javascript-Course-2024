@@ -1,5 +1,6 @@
 // Switch statement to fix lectures for every week
-const day = prompt('Input a day to see the course you have that day!');
+// const day = prompt('Input a day to see the course you have that day!');
+const day = 'monday'
 let result;
 switch (day) {
     case 'monday':
@@ -28,6 +29,7 @@ console.log(result);
 
 
 // You can else use the if else statement
+
 if (day === 'monday') {
     result = 'French';
 } else if (day === 'tuesday') {
@@ -38,7 +40,7 @@ if (day === 'monday') {
     result = 'Geography';
 } else if (day === 'friday') {
     result = 'African Communication System';
-} else if (day === 'saturday' || 'sunday') {
+} else if (day === 'saturday' || day === 'sunday') {
     result = 'Rest, its weekend :)';
 } else {
     result = 'Not a valid day (:';
