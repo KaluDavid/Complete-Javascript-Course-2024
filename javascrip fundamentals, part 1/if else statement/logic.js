@@ -1,12 +1,70 @@
 // lets see if sarah is ready to drive
-const hasDriversLicense = true;
-const hasGoodVision = false;
+// const hasDriversLicense = true;
+// const hasGoodVision = false;
 
-let drive;
-if (hasDriversLicense && hasGoodVision) {
-    drive = 'She can drive';
-} else {
-    drive = 'let someone else drive';
+// let drive;
+// if (hasDriversLicense && hasGoodVision) {
+//     drive = 'She can drive';
+// } else {
+//     drive = 'let someone else drive';
+// }
+
+// console.log(drive);
+/*
+Coding Challenge #3
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks �
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+*/
+
+// Team Dolphins and Koalas, competing 3 times against each other,winner with highest average wins the trophy
+// task 1
+// calculate average score using the test data
+
+// task 2
+// let dolphinsScore = (96 + 108 + 89) / 3;
+// let koalasScore = (88 + 91 + 110) / 3;
+// console.log(dolphinsScore, koalasScore);
+
+// const minimumScore = 100;
+// let result;
+// if (dolphinsScore >= !minimumScore) {
+//     result = 'dolphins team win'
+// } else if (koalasScore >= !minimumScore) {
+//     result = 'koalas team win'
+// } else if (dolphinsScore && koalasScore < !minimumScore) {
+//     result = 'its a draw'
+// }
+
+// console.log(result);
+
+let dolphinsScore = (97 + 112 + 101) / 3;
+let koalasScore = (109 + 95 + 123) / 3;
+console.log(dolphinsScore, koalasScore);
+const minimumScore = 100;
+let result;
+if (dolphinsScore >= minimumScore) {
+    result = 'dolphins team win'
+} else if (koalasScore >= minimumScore) {
+    result = 'koalas team win'
+} else if (dolphinsScore === koalasScore) {
+    result = 'its a draw'
 }
 
-console.log(drive);
+console.log(result);
