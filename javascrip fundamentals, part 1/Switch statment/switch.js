@@ -58,7 +58,7 @@ for all other simply log 'Great language too :D'
 */
 // answer
 
-const language = 'chinese';
+const language = prompt('Only world top 5 language grade will be executed correctly');
 
 switch (language) {
     case 'chinese':
