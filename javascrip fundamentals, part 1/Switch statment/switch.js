@@ -1,4 +1,4 @@
-// Switch statement to fix lectures for every week
+// use a switch statement to fix lectures for every week
 // const day = prompt('Input a day to see the course you have that day!');
 const day = 'monday'
 let result;
