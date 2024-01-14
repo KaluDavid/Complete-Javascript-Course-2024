@@ -75,3 +75,33 @@ store the results into variables, and log them to the console
 the same populations)*/
 
 
+//  function declaration
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+const nigeriaPopulation = 200;
+const nigeriaData = percentageOfWorld1(nigeriaPopulation);
+let resultOutput = `Nigeria has ${nigeriaPopulation} million people, so it's about ${nigeriaData}% of
+the world population`;
+console.log(resultOutput);
+
+
+// function expression
+const percentageOfWorld2 = function (population) {
+    return (population / 7900) * 100;
+}
+const ghanaPopulation = 60;
+const ghanaData = percentageOfWorld2(ghanaPopulation);
+resultOutput = `Ghana has ${ghanaPopulation} million people, so it's about ${ghanaData}% of
+the world population`;
+console.log(resultOutput);
+
+
+
+
+function percentageOfWorld3(population) {
+    return (population / 7900) * 100;
+}
+const populate = percentageOfWorld3(100);
+console.log(`Cameroon has ${100} million people, so it's about ${populate}% of
+the world population`)
