@@ -76,14 +76,14 @@ the same populations)*/
 
 
 //  function declaration
-function percentageOfWorld1(population) {
-    return (population / 7900) * 100;
-}
-const nigeriaPopulation = 200;
-const nigeriaData = percentageOfWorld1(nigeriaPopulation);
-let resultOutput = `Nigeria has ${nigeriaPopulation} million people, so it's about ${nigeriaData}% of
-the world population`;
-console.log(resultOutput);
+// function percentageOfWorld1(population) {
+//     return (population / 7900) * 100;
+// }
+// const nigeriaPopulation = 200;
+// const nigeriaData = percentageOfWorld1(nigeriaPopulation);
+// let resultOutput = `Nigeria has ${nigeriaPopulation} million people, so it's about ${nigeriaData}% of
+// the world population`;
+// console.log(resultOutput);
 
 
 // function expression
