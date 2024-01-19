@@ -21,3 +21,11 @@ console.log(friends.length);
 console.log(friends[friends.length - 1]);
 
 
+
+// To change a value in an Array
+friends[2] = 'Jacob';
+console.log(friends);
+
+
+
+// 
