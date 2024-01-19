@@ -69,5 +69,4 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
-// console.log(scoreDolphins, scoreKoalas)
 checkWinner(scoreDolphins, scoreKoalas);
