@@ -69,4 +69,10 @@ console.log(friends.indexOf('Dhave'));
 // includes();  is an Es6 methods that returns true if the element is in the Array and returns false if the element is not in the array
 console.log(friends.includes('Dhave')); //true
 console.log(friends.includes('John')) //false
+
 // The .includes() can be used to write conditionals
+if (friends.includes('Delly')) {
+    console.log('You have a friend called Delly');
+} else {
+    console.log("You don't have a friend called Delly");
+}
