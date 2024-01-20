@@ -28,7 +28,25 @@ console.log(friends);
 
 
 
-// 
+//
 // you can't replace the whole Arrays
-friends = 'john', 'peter', 'job', 'jack';
-// console.log(friends[])
+// friends = 'john', 'peter', 'job', 'jack';
+// console.log(friends)
+
+
+// adding array in another
+const goodFriends = [friends[0], friends[3]];
+console.log(goodFriends)
+
+
+// Arrays method
+
+// methoda that adds element to the Arrays
+//  .push = adds element at the end of the arrays
+friends.push('Delly');
+console.log(friends);
+
+
+//  .unshift = adds element at the beginning of the arrays
+friends.unshift('Ella');
+console.log(friends)
