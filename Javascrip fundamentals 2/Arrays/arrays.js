@@ -41,12 +41,31 @@ console.log(goodFriends)
 
 // Arrays method
 
-// methoda that adds element to the Arrays
-//  .push = adds element at the end of the arrays
+// methods that adds element to the Arrays
+//  .push()  adds element at the end of the arrays
 friends.push('Delly');
 console.log(friends);
 
 
-//  .unshift = adds element at the beginning of the arrays
+//  .unshift()  adds element at the beginning of the arrays
 friends.unshift('Ella');
-console.log(friends)
+console.log(friends);
+
+// Elements that removes 
+// .pop() removes the last array value
+friends.pop()
+console.log(friends);
+// here you  don't need to pass a value
+
+
+// .shift() removes the last array value
+friends.shift()
+console.log(friends);
+
+
+// .indexOf() shows the initial position of the value passed
+console.log(friends.indexOf('Dhave'));
+
+// includes();  is an Es6 methods that returns true if the element is in the Array and returns false if the element is not in the array
+console.log(friends.includes('Dhave')); //true
+console.log(friends.includes('John')) //false
