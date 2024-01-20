@@ -29,3 +29,6 @@ console.log(friends);
 
 
 // 
+// you can't replace the whole Arrays
+friends = 'john', 'peter', 'job', 'jack';
+// console.log(friends[])
