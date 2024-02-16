@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 // the for loop
 for (let rep = 1; rep <= 10; rep++) {
   console.log("I love to code");
@@ -7,20 +7,29 @@ for (let rep = 1; rep <= 10; rep++) {
 // LOOPING ARRAYS, BREAKING AND CONTINUING
 
 // so lets create an array
-const dhave = [
-  "programmer",
-  "Student",
-  2024 - 2000,
-  ["michael", "Danny", "Joy Girlie", "GodsWill"],
+const davidData = [
+  "John",
+  "David",
+  ["Michael", "Elsa", "Danny"],
+  1999 - 2024,
+  "Programmer",
+  "i Love to code....",
 ];
 
-// looping the array
-for (let i = 0; dhave.length; i++) {
-  console.log(dhave[i], typeof dhave[i]);
+const types = []; // here the new array types will be based on the davidData array
+// its gonna have the same length
+
+for (let i = 0; i < davidData.length; i++) {
+  // Reading from david arrays
+  console.log(davidData[i], typeof davidData[i]);
+
+  // filling the types arrays
+  // types[i] = typeof davidData[i];
+
+  // lets try the .push method
+  types.push(davidData[i]);
 }
+console.log(types);
 
 
-// Up next is creating a new array that has all this type of each of the element. So basically, typeof dhave[i];
-
-// create an empty var
-const type = [];
+// Now Lets try out something
