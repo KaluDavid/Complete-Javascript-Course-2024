@@ -108,3 +108,13 @@ while (rep <= 5 /* the condition*/) {
 
   rep++; //the counter increment
 }
+
+// lets take up another example
+let dice = Math.trunc(Math.random() * 6 )+ 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+
+  if (dice === 6) {
+    console.log("Loop is ending....");
+  }
+}
