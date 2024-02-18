@@ -90,10 +90,21 @@ for (let exercise = 1; exercise < 4; exercise++) {
   console.log(`__________ Starting exercise ${exercise}__________`);
 
   for (let rep = 1; rep < 6; rep++) {
-    console.log(`I am good at football ${rep}`);
-
-    for (let ball = 1; ball < 3; ball++) {
-      console.log(`I'm a baller ${ball}`);
-    }
+    console.log(`Exercise ${exercise}: I am good at football ${rep}`);
   }
+}
+
+console.log(`
+
+
+
+___________WHILE LOOP____________
+
+`);
+// WHILE LOOP
+let rep = 1; /*the initial counter repetition value */
+while (rep <= 5 /* the condition*/) {
+  console.log(`I love to play ${rep} `);
+
+  rep++; //the counter increment
 }
