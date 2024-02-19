@@ -118,3 +118,10 @@ while (dice !== 6) {
     console.log("Loop is ending....");
   }
 }
+
+
+
+
+
+
+
