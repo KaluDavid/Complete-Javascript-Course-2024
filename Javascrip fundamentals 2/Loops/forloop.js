@@ -116,28 +116,96 @@
 //   }
 // }
 
-// Problem Solving
+// // Problem Solving
 
-//We Work for a company building a smart home thermometer. Our most risked task is this: Given an Array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error
+// //We Work for a company building a smart home thermometer. Our most risked task is this: Given an Array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error
 
-const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
-// solution
-//1) Understand the problem
-// -- What is the temperature amplitude? Answer: Difference between highest and lowest temp
-//-- How to compute max and min temperatures
-//-- WHat's a sensor error and what to do when the problem occur
+// // solution
+// //1) Understand the problem
+// // -- What is the temperature amplitude? Answer: Difference between highest and lowest temp
+// //-- How to compute max and min temperatures
+// //-- WHat's a sensor error and what to do when the problem occur
 
-// 2) Break the problems into smaller bit
-// -- How to ignore errors?
-// -- Find max value in temperature array
-// -- Find Min value
-// -- Subtract min from Max (amplitude) then return it
-//
+// // 2) Break the problems into smaller bit
+// // -- How to ignore errors?
+// // -- Find max value in temperature array
+// // -- Find Min value
+// // -- Subtract min from Max (amplitude) then return it
+// //
 
-// Lets start building
+// // Lets start building
 
-const calTemAmplitudeNew = function (t1, t2) {
+// const calTemAmplitudeNew = function (t1, t2) {
+//   const temp = t1.concat(t2);
+//   console.log(temp);
+
+//   let max = temp[0];
+//   let min = temp[0];
+
+//   for (let i = 0; i < temp.length; i++) {
+//     const curTemp = temp[i];
+//     if (typeof curTemp !== "number") continue;
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
+
+// const amplitudeNew = calTemAmplitudeNew([3, 5, 1], [9, 0, 5]);
+// console.log(amplitudeNew);
+// // This is how it works
+// // In the beginning, before we start the array, the max (let max) will be the first element of the array (3)
+// // max = 3
+// // Then the loops starts the first position
+// // the we ask // is temp[i] > max
+// // is 3 greater than 3 (thats a no, nothing happens)
+// // then in the next iteration: is 7 greater than 3 (yes)
+// // Max = 7
+// // then in the next iteration: is 4 greater than 7 (no, nothing happens)
+// // Therefore, we're done
+// // Then the result in the end is  Max = 7
+
+// // Problem 2
+// // Function should now recieve 2 arrays of temps
+
+// // 1) Understanding the problem
+// // -- With 2 arrays, should w implement functionality twice? NO! just merge two arrays
+
+// // 2) Breaking the problems
+// // -- How to merge two arrays?p0
+
+// Lets debug
+// The smart thermometer we were working on before
+// We need a do some measurement in a unit called Kelvin which is the absolute temperature
+// all wwe have to do here is add 273 to the temperature in decree celsius
+
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temp",
+//     unit: " celsius",
+
+//     //3) FIX the Bug
+//     value: Number(prompt("Degree Celsius:")),
+//   };
+
+//   //2) FINDING the Bug
+//   console.table(measurement);
+//   //   console.error(measurement.value);
+//   //   console.log(measurement.value);
+//   //   console.warn(measurement.value);
+
+//   const Kelvin = measurement.value + 273;
+
+//   return Kelvin;
+// };
+// //1) Identify the Bug
+// console.log(measureKelvin());
+
+// making a bigger bug
+const calTemAmplitudeBug = function (t1, t2) {
   const temp = t1.concat(t2);
   console.log(temp);
 
@@ -154,25 +222,5 @@ const calTemAmplitudeNew = function (t1, t2) {
   return max - min;
 };
 
-const amplitudeNew = calTemAmplitudeNew([3, 5, 1], [9, 0, 5]);
-console.log(amplitudeNew);
-// This is how it works
-// In the beginning, before we start the array, the max (let max) will be the first element of the array (3)
-// max = 3
-// Then the loops starts the first position
-// the we ask // is temp[i] > max
-// is 3 greater than 3 (thats a no, nothing happens)
-// then in the next iteration: is 7 greater than 3 (yes)
-// Max = 7
-// then in the next iteration: is 4 greater than 7 (no, nothing happens)
-// Therefore, we're done
-// Then the result in the end is  Max = 7
-
-// Problem 2
-// Function should now recieve 2 arrays of temps
-
-// 1) Understanding the problem
-// -- With 2 arrays, should w implement functionality twice? NO! just merge two arrays
-
-// 2) Breaking the problems
-// -- How to merge two arrays?p0
+const amplitudeBug = calTemAmplitudeBug([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeBug);
