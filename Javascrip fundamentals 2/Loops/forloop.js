@@ -182,35 +182,38 @@
 // We need a do some measurement in a unit called Kelvin which is the absolute temperature
 // all wwe have to do here is add 273 to the temperature in decree celsius
 
-// const measureKelvin = function () {
-//   const measurement = {
-//     type: "temp",
-//     unit: " celsius",
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
 
-//     //3) FIX the Bug
-//     value: Number(prompt("Degree Celsius:")),
-//   };
+    //3) FIX the Bug
+    // value: Number(prompt("Degree Celsius:")),
+    value: 10,
+  };
 
-//   //2) FINDING the Bug
-//   console.table(measurement);
-//   //   console.error(measurement.value);
-//   //   console.log(measurement.value);
-//   //   console.warn(measurement.value);
+  //2) FINDING the Bug
+  console.table(measurement);
 
-//   const Kelvin = measurement.value + 273;
+  // console.error(measurement.value);
+  //   console.log(measurement.value);
+  //   console.warn(measurement.value);
 
-//   return Kelvin;
-// };
-// //1) Identify the Bug
-// console.log(measureKelvin());
+  const Kelvin = measurement.value + 273;
+
+  return Kelvin;
+};
+//1) Identify the Bug
+console.log(measureKelvin());
 
 // making a bigger bug
 const calTemAmplitudeBug = function (t1, t2) {
   const temp = t1.concat(t2);
   console.log(temp);
+  console.table(temp);
 
-  let max = temp[0];
-  let min = temp[0];
+  let max = 0;
+  let min = 0;
 
   for (let i = 0; i < temp.length; i++) {
     const curTemp = temp[i];
@@ -222,5 +225,6 @@ const calTemAmplitudeBug = function (t1, t2) {
   return max - min;
 };
 
-const amplitudeBug = calTemAmplitudeBug([3, 5, 1], [9, 0, 5]);
+const amplitudeBug = calTemAmplitudeBug([3, 5, 1], [9, 4, 5]);
+// A) IDENIFY
 console.log(amplitudeBug);
