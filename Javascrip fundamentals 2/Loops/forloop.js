@@ -228,3 +228,6 @@ const calTemAmplitudeBug = function (t1, t2) {
 const amplitudeBug = calTemAmplitudeBug([3, 5, 1], [9, 4, 5]);
 // A) IDENIFY
 console.log(amplitudeBug);
+
+
+// space
