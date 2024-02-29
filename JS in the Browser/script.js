@@ -19,3 +19,6 @@ console.log((document.querySelector(".guess").value = 10));
 document.querySelector(".check").addEventListener("click", function () {
   console.log(document.querySelector(".guess").value);
 });
+
+
+
