@@ -17,8 +17,10 @@ console.log((document.querySelector(".guess").value = 10));
 
 // lets now work on the project
 document.querySelector(".check").addEventListener("click", function () {
-  console.log(document.querySelector(".guess").value);
+  // let put it in a var
+  const guess = Number(document.querySelector(".guess").value);
+  console.log(guess);
+
+  // lets change the text once the value is inputed
+  document.querySelector(".message").textContent = "✨😃Correct Winner";
 });
-
-
-
