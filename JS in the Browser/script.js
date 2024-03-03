@@ -25,7 +25,9 @@ document.querySelector(".check").addEventListener("click", function () {
   // document.querySelector(".message").textContent = "✨😃Correct Winner";
 
   // lets write some logical operators, just
-  if(!guess){
+  if (!guess) {
     document.querySelector(".message").textContent = "🚫 No Number!";
   }
 });
+
+
