@@ -16,6 +16,12 @@ console.log((document.querySelector(".guess").value = 10));
 */
 
 // lets now work on the project
+
+// so here, basically we need to a secret number btw 0-20
+const computerGuess = Math.trunc(Math.random() * 20) + 1;
+document.querySelector(".number").textContent = computerGuess;
+
+// here is for the score
 document.querySelector(".check").addEventListener("click", function () {
   // let put it in a var
   const guess = Number(document.querySelector(".guess").value);
@@ -27,7 +33,14 @@ document.querySelector(".check").addEventListener("click", function () {
   // lets write some logical operators, just
   if (!guess) {
     document.querySelector(".message").textContent = "🚫 No Number!";
+  } else if (guess === computerGuess) {
+    document.querySelector(".message").textContent = "✨😃You Winner";
+  } else if (guess > computerGuess) {
+    document.querySelector(".message").textContent = "📈Too High";
+  } else if (guess < computerGuess) {
+    document.querySelector(".message").textContent = "📉Too Low";
   }
+  // here if the score is too high, too low or equal to
+
+  // up next, the score should decrease if you get the guess wrongly
 });
-
-
