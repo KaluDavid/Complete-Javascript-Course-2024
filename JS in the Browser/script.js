@@ -23,27 +23,41 @@ document.querySelector(".number").textContent = computerGuess;
 
 let score = 20;
 
-// here is for the score
 document.querySelector(".check").addEventListener("click", function () {
-  // let put it in a var
+
   const guess = Number(document.querySelector(".guess").value);
   console.log(guess);
 
-  // // lets change the text once the value is inputed
-  // document.querySelector(".message").textContent = "✨😃Correct Winner";
-
-  // lets write some logical operators, just
+  // When there is no Number
   if (!guess) {
     document.querySelector(".message").textContent = "🚫 No Number!";
-  } else if (guess === computerGuess) {
-    document.querySelector(".message").textContent = "✨😃You Winner";
-  } else if (guess > computerGuess) {
-    document.querySelector(".message").textContent = "📈Too High";
-    score--
-  } else if (guess < computerGuess) {
-    document.querySelector(".message").textContent = "📉Too Low";
-  }
-  // here if the score is too high, too low or equal to
 
-  // up next, the score should decrease if you get the guess wrongly
+    // When Number is correct and wins
+  } else if (guess === computerGuess) {
+    document.querySelector(".message").textContent = "✨Correct Number";
+
+
+    // when guess is too high
+  } else if (guess > computerGuess) {
+    if (score > 1) {
+      document.querySelector(".message").textContent = "📈Too High";
+      score--;
+      document.querySelector(".score").textContent = score; //so what happens here is the decreases by one when you get a number wrong
+    } else {
+      document.querySelector(".message").textContent = "⛔You lose";
+      document.querySelector(".score").textContent = 0;
+    }
+
+    // when guess is too Low
+  } else if (guess < computerGuess) {
+    if (score > 1) {
+      document.querySelector(".message").textContent = "📉Too Low";
+      score--;
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".message").textContent = "⛔You lose";
+      document.querySelector(".score").textContent = 0;
+    }
+  }
+
 });
