@@ -21,6 +21,8 @@ console.log((document.querySelector(".guess").value = 10));
 const computerGuess = Math.trunc(Math.random() * 20) + 1;
 document.querySelector(".number").textContent = computerGuess;
 
+let score = 20;
+
 // here is for the score
 document.querySelector(".check").addEventListener("click", function () {
   // let put it in a var
@@ -37,6 +39,7 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".message").textContent = "✨😃You Winner";
   } else if (guess > computerGuess) {
     document.querySelector(".message").textContent = "📈Too High";
+    score--
   } else if (guess < computerGuess) {
     document.querySelector(".message").textContent = "📉Too Low";
   }
