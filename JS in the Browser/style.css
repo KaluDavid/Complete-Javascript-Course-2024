@@ -16,21 +16,30 @@ body {
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
+  overflow: hidden;
 }
+
 
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  height: 45vh;
   border-bottom: 7px solid #eee;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
 }
 
+
 main {
-  height: 65vh;
+  margin-top: 8%;
   color: #eee;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /* overflow-x: hidden; */
+
 }
 
 .left {
@@ -49,11 +58,6 @@ main {
 h1 {
   font-size: 4rem;
   text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .number {
@@ -61,7 +65,7 @@ h1 {
   color: #333;
   font-size: 6rem;
   width: 15rem;
-  padding: 3rem 0rem;
+  padding: 3rem 4rem;
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -69,19 +73,12 @@ h1 {
   transform: translate(-50%, 50%);
 }
 
-.between {
-  font-size: 1.4rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
+header div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-.again {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
 }
-
 .guess {
   background: none;
   border: 4px solid #eee;
@@ -116,4 +113,74 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+/* Media-Querry */
+
+/* Tablet screen 884 */
+
+@media screen and (max-width:834px) {
+  header{
+padding-top: 10%; 
+ height: 40vh;
+ gap: 30%;
+  }
+  main {
+    margin-top: 28%;
+}
+}
+
+
+@media screen and (max-width:428px) {
+body{
+  overflow: initial;
+}
+header{
+  gap: 10%;
+}
+header div{
+  flex-direction: column;
+  padding-top: 7%;
+}
+.between{
+  position: absolute;
+  top: 10%;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+}
+  main{
+    overflow: initial;
+    flex-direction: column;
+    margin-top: 18%;
+    justify-content: initial;
+    gap: 10%;
+    /* text-align: left; */
+  }
+  .left {
+    width:0%;
+    padding-bottom: 10%;
+}
+.right {
+  width: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-right: 75%;
+  white-space: nowrap;
+}
+
+.message {
+  margin-bottom: 0%;
+ 
+  height: 0%;
+}
+.label-score {
+  margin-bottom: 0%;
+}
 }

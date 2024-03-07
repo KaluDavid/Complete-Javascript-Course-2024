@@ -18,9 +18,11 @@ console.log((document.querySelector(".guess").value = 10));
 // lets now work on the project
 
 // so here, basically we need to a secret number btw 0-20
-const computerGuess = Math.trunc(Math.random() * 20) + 1;
+let computerGuess = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
+let highScore = 0; // lets implement the high score
+
 // document.querySelector(".number").textContent = computerGuess;
 
 document.querySelector(".check").addEventListener("click", function () {
@@ -40,6 +42,12 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
 
+    // lets implement the high score
+    if (score > highScore) {
+      highScore = score;
+
+      document.querySelector('.highscore').textContent = highScore;
+    }
     // when guess is too high
   } else if (guess > computerGuess) {
     if (score > 1) {
@@ -74,21 +82,25 @@ document.querySelector(".check").addEventListener("click", function () {
 
 // element with 'again' class and attach a click event handler
 document.querySelector(".again").addEventListener("click", function () {
-  // initial condition of the message
+  //     // initial condition of the score
+  score = 20;
+  computerGuess = Math.trunc(Math.random() * 20) + 1; //so  we are calling back the computerGuess number so it will guess another number as we reset the game
+  document.querySelector(".score").textContent = score;
+
+  //   // initial condition of the message
   document.querySelector(".message").textContent = "Start guessing...";
 
-  // initial conditions of the number
+  //   // initial conditions of the number
+
   document.querySelector(".number").textContent = "?";
-  document.querySelector(".number").style.width = "15 rem";
+  document.querySelector(".number").style.width = "15rem";
   document.querySelector("body").style.backgroundColor = "#222";
 
-  // initial condition of the score
-  document.querySelector(".score").textContent = 20;
-
-  // initial condition of the guess input
-  const guess = Number(document.querySelector(".guess").value);
+  //   // initial condition of the guess input
+  document.querySelector(".guess").value = "";
 });
-/*
+
+/*  
 Coding Challenge #1
 Implement a game rest functionality, so that the player can make a new guess!
 Your tasks:
@@ -101,6 +113,16 @@ fields
 
 */
 
-// here the number increases by 1
-// score++;
-// document.querySelector(".score").textContent = score;
+// // tutors work
+// document.querySelector(".again").addEventListener("click", function () {
+//   score = 20;
+//   computerGuess = Math.trunc(Math.random() * 20) + 1;
+
+//   document.querySelector(".message").textContent = "Start guessing...";
+//   document.querySelector(".score").textContent = score;
+//   document.querySelector(".number").textContent = "?";
+//   document.querySelector(".guess").value = "";
+
+//   document.querySelector(".number").style.width = "15rem";
+//   document.querySelector("body").style.backgroundColor = "#222";
+// });
