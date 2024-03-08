@@ -16,7 +16,7 @@ body {
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -38,8 +38,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* overflow-x: hidden; */
-
+  padding-bottom: 10%;
 }
 
 .left {
@@ -183,4 +182,46 @@ h1 {
 .label-score {
   margin-bottom: 0%;
 }
+}
+
+/* screen 375 */
+@media screen and (max-width:375px) {
+  body{
+    overflow-y:scroll;
+  }
+  header{
+
+gap: 13%;
+height: 47vh;
+  }
+  header div{
+    padding-top: 15%;
+  }
+  
+  main{
+    margin-top: 25%;
+    padding-bottom: 20%;
+  }
+  .right {
+padding-top: 5%;
+    margin-right: 88%;
+
+  }
+}
+/* screen 320 */
+@media screen and (max-width:320px) {
+  header{
+
+    gap: 13%;
+    height: 65vh;
+      }
+  .right {
+padding-top: 5%;
+    margin-right: 88%;
+white-space: wrap;
+  }
+  .label-score, .label-highscore{
+white-space: nowrap;
+
+  }
 }
