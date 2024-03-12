@@ -17,6 +17,14 @@ console.log((document.querySelector(".guess").value = 10));
 
 // lets now work on the project
 
+// displayMessage function
+const displayMessage = function (message) {
+  document.querySelector(".message").textContent = message;
+};
+
+// 
+// displayGuess function
+
 // so here, basically we need to a secret number btw 0-20
 let computerGuess = Math.trunc(Math.random() * 20) + 1;
 
@@ -31,11 +39,12 @@ document.querySelector(".check").addEventListener("click", function () {
 
   // When there is no Number
   if (!guess) {
-    document.querySelector(".message").textContent = "🚫 No Number!";
-
+    // document.querySelector(".message").textContent = "🚫 No Number!";
+    displayMessage("🚫 No Number!");
     // When Number is correct and wins
   } else if (guess === computerGuess) {
-    document.querySelector(".message").textContent = "✨Correct Number";
+    // document.querySelector(".message").textContent = "✨Correct Number";
+    displayMessage("✨Correct Number")
     document.querySelector(".number").textContent = computerGuess;
 
     // lets add some styling if user wins
@@ -46,36 +55,55 @@ document.querySelector(".check").addEventListener("click", function () {
     if (score > highScore) {
       highScore = score;
 
-      document.querySelector('.highscore').textContent = highScore;
+      document.querySelector(".highscore").textContent = highScore;
     }
-    // when guess is too high
-  } else if (guess > computerGuess) {
+
+    // refactored code on too high and too low
+  } else if (guess !== computerGuess) {
     if (score > 1) {
-      document.querySelector(".message").textContent = "📈Too High";
+      // document.querySelector(".message").textContent =
+      //   guess > computerGuess ? "📈Too High" : "📉Too Low";
+      displayMessage( guess > computerGuess ? "📈Too High" : "📉Too Low")
       score--;
       document.querySelector(".score").textContent = score; //so what happens here is the decreases by one when you get a number wrong
     } else {
-      document.querySelector(".message").textContent = "⛔You lose";
+      // document.querySelector(".message").textContent = "⛔You lose";
+      displayMessage("⛔You lose")
       document.querySelector(".score").textContent = 0;
       // lets add some styling if user loses
       document.querySelector("body").style.backgroundColor = "red";
       document.querySelector(".number").style.width = "15rem";
     }
-
-    // when guess is too Low
-  } else if (guess < computerGuess) {
-    if (score > 1) {
-      document.querySelector(".message").textContent = "📉Too Low";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else {
-      document.querySelector(".message").textContent = "⛔You lose";
-      document.querySelector(".score").textContent = 0;
-      // lets add some styling if user lose
-      document.querySelector("body").style.backgroundColor = "red";
-      document.querySelector(".number").style.width = "15rem";
-    }
   }
+
+  //   // when guess is too high
+  // } else if (guess > computerGuess) {
+  //   if (score > 1) {
+  //     document.querySelector(".message").textContent = "📈Too High";
+  //     score--;
+  //     document.querySelector(".score").textContent = score; //so what happens here is the decreases by one when you get a number wrong
+  //   } else {
+  //     document.querySelector(".message").textContent = "⛔You lose";
+  //     document.querySelector(".score").textContent = 0;
+  //     // lets add some styling if user loses
+  //     document.querySelector("body").style.backgroundColor = "red";
+  //     document.querySelector(".number").style.width = "15rem";
+  //   }
+
+  //   // when guess is too Low
+  // } else if (guess < computerGuess) {
+  //   if (score > 1) {
+  //     document.querySelector(".message").textContent = "📉Too Low";
+  //     score--;
+  //     document.querySelector(".score").textContent = score;
+  //   } else {
+  //     document.querySelector(".message").textContent = "⛔You lose";
+  //     document.querySelector(".score").textContent = 0;
+  //     // lets add some styling if user lose
+  //     document.querySelector("body").style.backgroundColor = "red";
+  //     document.querySelector(".number").style.width = "15rem";
+  //   }
+  // }
 });
 
 // here we reset the game by clicking the again button
@@ -88,7 +116,8 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".score").textContent = score;
 
   //   // initial condition of the message
-  document.querySelector(".message").textContent = "Start guessing...";
+  // document.querySelector(".message").textContent = "Start guessing...";
+  displayMessage( "Start guessing...")
 
   //   // initial conditions of the number
 
