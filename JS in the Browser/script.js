@@ -22,7 +22,7 @@ const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
 
-// 
+//
 // displayGuess function
 
 // so here, basically we need to a secret number btw 0-20
@@ -44,12 +44,12 @@ document.querySelector(".check").addEventListener("click", function () {
     // When Number is correct and wins
   } else if (guess === computerGuess) {
     // document.querySelector(".message").textContent = "✨Correct Number";
-    displayMessage("✨Correct Number")
+    displayMessage("✨Correct Number");
     document.querySelector(".number").textContent = computerGuess;
 
     // lets add some styling if user wins
     document.querySelector("body").style.backgroundColor = "#60b347";
-    document.querySelector(".number").style.width = "30rem";
+    document.querySelector(".number").style.width = "23rem";
 
     // lets implement the high score
     if (score > highScore) {
@@ -63,12 +63,12 @@ document.querySelector(".check").addEventListener("click", function () {
     if (score > 1) {
       // document.querySelector(".message").textContent =
       //   guess > computerGuess ? "📈Too High" : "📉Too Low";
-      displayMessage( guess > computerGuess ? "📈Too High" : "📉Too Low")
+      displayMessage(guess > computerGuess ? "📈Too High" : "📉Too Low");
       score--;
       document.querySelector(".score").textContent = score; //so what happens here is the decreases by one when you get a number wrong
     } else {
       // document.querySelector(".message").textContent = "⛔You lose";
-      displayMessage("⛔You lose")
+      displayMessage("⛔You lose");
       document.querySelector(".score").textContent = 0;
       // lets add some styling if user loses
       document.querySelector("body").style.backgroundColor = "red";
@@ -117,7 +117,7 @@ document.querySelector(".again").addEventListener("click", function () {
 
   //   // initial condition of the message
   // document.querySelector(".message").textContent = "Start guessing...";
-  displayMessage( "Start guessing...")
+  displayMessage("Start guessing...");
 
   //   // initial conditions of the number
 
