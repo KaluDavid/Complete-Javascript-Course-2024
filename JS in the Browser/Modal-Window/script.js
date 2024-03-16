@@ -14,13 +14,11 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnShowModal = document.querySelectorAll(".show-modal");
 
-
 // showModal
 const showModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
-
 
 // closeModal
 const closeModal = function () {
@@ -32,10 +30,18 @@ const closeModal = function () {
 for (let i = 0; i < btnShowModal.length; i++)
   btnShowModal[i].addEventListener("click", showModal);
 
-
 //   close modal
 btnCloseModal.addEventListener("click", closeModal);
 
-
 // close overlay
 overlay.addEventListener("click", closeModal);
+
+// key event
+document.addEventListener(key);
+
+// adding esc key to our project
+document.addEventListener("keydown", function (e) {
+  if (e.key === "esc" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
