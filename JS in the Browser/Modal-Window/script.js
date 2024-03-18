@@ -36,12 +36,16 @@ btnCloseModal.addEventListener("click", closeModal);
 // close overlay
 overlay.addEventListener("click", closeModal);
 
-// key event
-document.addEventListener(key);
+// // key event
+// document.addEventListener(key);
 
 // adding esc key to our project
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "esc" && !modal.classList.contains("hidden")) {
+//     closeModal();
+//   }
+// });
+
 document.addEventListener("keydown", function (e) {
-  if (e.key === "esc" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
+if(e.key )
 });
