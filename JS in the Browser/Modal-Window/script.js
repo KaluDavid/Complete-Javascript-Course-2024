@@ -36,7 +36,7 @@ btnCloseModal.addEventListener("click", closeModal);
 // close overlay
 overlay.addEventListener("click", closeModal);
 
-// // key event
+// key event
 // document.addEventListener(key);
 
 // adding esc key to our project
@@ -49,3 +49,6 @@ overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (e) {
 if(e.key )
 });
+
+
+
