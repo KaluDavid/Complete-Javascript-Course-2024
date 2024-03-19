@@ -40,15 +40,9 @@ overlay.addEventListener("click", closeModal);
 // document.addEventListener(key);
 
 // adding esc key to our project
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "esc" && !modal.classList.contains("hidden")) {
-//     closeModal();
-//   }
-// });
 
 document.addEventListener("keydown", function (e) {
-if(e.key )
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });
-
-
-
