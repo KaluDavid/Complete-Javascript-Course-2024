@@ -99,8 +99,6 @@ main {
   font-size: 3.5rem;
 }
 
-
-
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
@@ -168,7 +166,6 @@ main {
   color: #c7365f;
 }
 
-
-.hide{
+.hidden {
   display: none;
 }
