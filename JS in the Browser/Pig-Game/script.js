@@ -40,7 +40,6 @@ const switchPlayer = function () {
   activePlayer = activePlayer === 0 ? 1 : 0;
   currentScore = 0;
 
-  
   // Changing the BG color
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
@@ -52,13 +51,9 @@ btnRoll.addEventListener('click', function () {
     //1- Generate a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
 
-
-
     //   2- display Dice
     diceEl.style.display = 'block';
     diceEl.src = `dice-${dice}.png`;
-
-
 
     //   3 - Switching the active players
     if (dice !== 1) {
@@ -71,7 +66,6 @@ btnRoll.addEventListener('click', function () {
     }
   }
 });
-
 
 // Holding Current score
 btnHold.addEventListener('click', function () {
@@ -98,7 +92,6 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
-
 
 // Resetting The game
 btnNew.addEventListener('click', init);
