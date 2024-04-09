@@ -1,6 +1,4 @@
-'use strict ';
-
-
+"use strict ";
 
 // starting with function
 /*
@@ -43,22 +41,24 @@ console.log(ghanaData);
 // function declartion
 
 function ageCal(birthYear) {
-    // you can also direction return the function, rather than storing in a var
-    return 2034 - birthYear;
+  // you can also direction return the function, rather than storing in a var
+  return 2034 - birthYear;
 }
 const realAge = ageCal(2006);
 console.log(realAge);
 
 // Function Expression
 const myAge = function (birthYear) {
-    return 2024 - birthYear;
-}
+  return 2024 - birthYear;
+};
 const age2 = myAge(2006);
 console.log(age2);
 
+console.log(`
 
 
 
+`);
 /*
 LECTURE: Function Declarations vs. Expressions
 1. The world population is 7900 million people. Create a function declaration
@@ -74,7 +74,6 @@ store the results into variables, and log them to the console
 'percentageOfWorld2', and also call it with 3 country populations (can be
 the same populations)*/
 
-
 //  function declaration
 // function percentageOfWorld1(population) {
 //     return (population / 7900) * 100;
@@ -85,23 +84,25 @@ the same populations)*/
 // the world population`;
 // console.log(resultOutput);
 
-
 // function expression
 const percentageOfWorld2 = function (population) {
-    return (population / 7900) * 100;
-}
+  return (population / 7900) * 100;
+};
 const ghanaPopulation = 60;
 const ghanaData = percentageOfWorld2(ghanaPopulation);
 resultOutput = `Ghana has ${ghanaPopulation} million people, so it's about ${ghanaData}% of
 the world population`;
 console.log(resultOutput);
 
-
-
-
 function percentageOfWorld3(population) {
-    return (population / 7900) * 100;
+  return (population / 7900) * 100;
 }
 const populate = percentageOfWorld3(100);
 console.log(`Cameroon has ${100} million people, so it's about ${populate}% of
-the world population`)
+the world population`);
+
+console.log(`
+
+
+
+`);

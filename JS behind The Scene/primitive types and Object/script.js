@@ -17,3 +17,4 @@ friend.age = 27;
 
 console.log("friend", friend);
 console.log("me", me);
+

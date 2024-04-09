@@ -34,3 +34,19 @@ jessicaCopy.family.push("emerald");
 
 console.log("Before Marriage:", jessica2);
 console.log("Before Marriage:", jessicaCopy);
+
+// how to style console.log
+const styles = `
+padding: 20px;
+background-color: red;
+color:black;
+
+`;
+
+// console.log("%c Hey bro", styles);
+
+const just = (document.getElementById("just").textContent = `hey bro 
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos explicabo, exercitationem eum, velit iusto tempora, ducimus esse consequatur sunt consectetur fuga voluptatum eos adipisci accusantium voluptatem. Quibusdam, facilis assumenda? Placeat.
+`);
+
+just.textContent = styles;

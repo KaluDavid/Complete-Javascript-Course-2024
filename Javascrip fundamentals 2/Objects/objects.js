@@ -18,7 +18,7 @@ const danny = {
 
 console.log(`${danny['firstName']} has ${danny.friends.length} friends, and his best friend is ${danny.friends[2]}`);
 
-console.log(danny);
+console.log(danny)
 
 
 // DOT VS BRACKETS NOTATION
@@ -32,17 +32,17 @@ console.log(danny['firstName']);
 
 
 // Writing a user input expression
-// const dannyInput = prompt(`Do you wish to know more information about Danny, choose the following.
-// > firstName
-// > lastName
-// > age
-// > friends`);
+const dannyInput = prompt(`Do you wish to know more information about Danny, choose the following.
+> firstName
+> lastName
+> age
+> friends`);
 
-// if (danny[dannyInput]) {
-//     console.log(danny[dannyInput]);
-// }else{
-//     console.log("Invalid input!");
-// }
+if (danny[dannyInput]) {
+    console.log(danny[dannyInput]);
+}else{
+    console.log("Invalid input!");
+}
 
 
 
