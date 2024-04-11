@@ -1,25 +1,25 @@
-'use strict';
-
+"use strict";
 
 // Creating an object
 // e.g
 // give the details of Danny
 const danny = {
-    firstName: 'Danny',
-    lastName: 'Fred',
-    age: 2023 - 2000,
-    friends: ['Dhave', 'Winny', 'Michael']
-}//fundamental way of creating an object
+  firstName: "Danny",
+  lastName: "Fred",
+  age: 2023 - 2000,
+  friends: ["Dhave", "Winny", "Michael"],
+}; //fundamental way of creating an object
 
-// task 
+// task
 // danny has 3 friends, and his best friend is called michael
 // run the sentence without hard coding it
 // The the values "danny" "3 friends" and "michael from the object"
 
-console.log(`${danny['firstName']} has ${danny.friends.length} friends, and his best friend is ${danny.friends[2]}`);
+console.log(
+  `${danny["firstName"]} has ${danny.friends.length} friends, and his best friend is ${danny.friends[2]}`
+);
 
-console.log(danny)
-
+console.log(danny);
 
 // DOT VS BRACKETS NOTATION
 // Getting properties out of an object
@@ -28,38 +28,35 @@ console.log(danny)
 console.log(danny.firstName);
 
 // Brackets Notation
-console.log(danny['firstName']);
-
+console.log(danny["firstName"]);
 
 // Writing a user input expression
-const dannyInput = prompt(`Do you wish to know more information about Danny, choose the following.
+const dannyInput =
+  prompt(`Do you wish to know more information about Danny, choose the following.
 > firstName
 > lastName
 > age
 > friends`);
 
 if (danny[dannyInput]) {
-    console.log(danny[dannyInput]);
-}else{
-    console.log("Invalid input!");
+  console.log(danny[dannyInput]);
+} else {
+  console.log("Invalid input!");
 }
-
-
-
 
 // Objects Method
 const david = {
-    firstName: 'dhave',
-    birthYear: 1970,
-    friends: ['michael', 'delly', 'gilbert', 'danny'],
-    job: 'software engineer',
+  firstName: "dhave",
+  birthYear: 1970,
+  friends: ["michael", "delly", "gilbert", "danny"],
+  job: "software engineer",
 
-    // let's calculate the age
-    calage: function () {
-        console.log(this)// the this keyword, points to the object identifier
-        return 2024 - this.birthYear;
-    }
-}
+  // let's calculate the age
+  calage: function () {
+    console.log(this); // the this keyword, points to the object identifier
+    return 2024 - this.birthYear;
+  },
+};
 
 console.log(david.calage());
 
@@ -83,16 +80,13 @@ TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 
 */
 
 const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
 };
 
 const John = {
-    fullName: 'John Smith',
-   mass: 92,
-   height: 1.
-
+  fullName: "John Smith",
+  mass: 92,
+  height: 1,
 };
-
