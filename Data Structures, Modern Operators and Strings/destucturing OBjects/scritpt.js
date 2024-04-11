@@ -30,3 +30,12 @@ const restaurant = {
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
+
+// renaming the variables
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
