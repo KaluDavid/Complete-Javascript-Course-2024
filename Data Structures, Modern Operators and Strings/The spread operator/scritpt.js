@@ -26,43 +26,16 @@ const restaurant = {
       close: 24,
     },
   },
-
-  orderDelivery: function (obj) {
-    console.log(obj);
-  },
 };
 
-restaurant.orderDelivery ({
-  time: '22:30',
-  address: '67 victory way',
-mainIndex: 2,
-starterIndex: 2,
-});
+const arr = [7, 8, 9];
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// Manual way add arrays to another arrays
+const badArr = [5, 6, arr[0], arr[1], arr[2]];
+console.log(badArr);
 
-// renaming the variables
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
-
-// Default values
-const { menu = [], starterMenu: staters = [] } = restaurant;
-console.log(menu, staters);
-
-// Mutating Variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
-
-// Nesting Objects
-const {
-  fri: { open, close },
-} = openingHours;
-console.log(open, close);
+// With spread operator
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+// to get the individual elements in th newArr
+console.log(...newArr);
