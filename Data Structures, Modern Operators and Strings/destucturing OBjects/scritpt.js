@@ -27,17 +27,25 @@ const restaurant = {
     },
   },
 
-  orderDelivery: function (obj) {
-    console.log(obj);
+  orderDelivery: function ({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} by ${time}`);
   },
 };
 
-restaurant.orderDelivery ({
-  time: '22:30',
-  address: '67 victory way',
-mainIndex: 2,
-starterIndex: 2,
+// Destructuring Objects
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "67 victory way",
+  mainIndex: 2,
+  starterIndex: 2,
 });
+
+// calling the method (default value code run)
+restaurant.orderDelivery({
+  address: "10 ekpo okon",
+  starterIndex: 1,
+});
+
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);

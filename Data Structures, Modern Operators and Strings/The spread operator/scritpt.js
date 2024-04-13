@@ -39,3 +39,7 @@ const newArr = [1, 2, ...arr];
 console.log(newArr);
 // to get the individual elements in th newArr
 console.log(...newArr);
+
+
+const newMenue = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenue);
