@@ -43,3 +43,8 @@ console.log(...newArr);
 
 const newMenue = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenue);
+
+// join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
