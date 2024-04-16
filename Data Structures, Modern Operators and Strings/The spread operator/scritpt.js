@@ -26,8 +26,21 @@ const restaurant = {
       close: 24,
     },
   },
+
+  // check notes for examples explanation
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3} `
+    );
+  },
 };
 
+// Order pasta
+// const ingredients = [prompt("Let's make pasta!, Ingredient 1"), prompt('ingredient 2'), prompt('ingredient 3')]; //the prompts gets the individual ingredients
+// restaurant.orderPasta(...ingredients);
+// console.log(ingredients);
+
+// How it works
 const arr = [7, 8, 9];
 
 // Manual way add arrays to another arrays
@@ -40,11 +53,26 @@ console.log(newArr);
 // to get the individual elements in th newArr
 console.log(...newArr);
 
-
-const newMenue = [...restaurant.mainMenu, 'Gnocci'];
+const newMenue = [...restaurant.mainMenu, "Gnocci"];
 console.log(newMenue);
 
 // join 2 arrays
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
+// the spread Operator on Strings
+const str = "Dhave";
+const letters = [...str, "", "D"];
+console.log(letters);
+// expanding the string
+console.log(...arr);
+console.log(...str);
+
+// The spread operator on objects
+// check notes for examples explanation
+const newRestaurant = { foundedIn: 1992, ...restaurant, founder: "Guiseppe" };
+console.log(newRestaurant);
+
+// shallow copies of Object
+const restaurantCopy = {...restaurant};
+console.log(restaurantCopy.name);
